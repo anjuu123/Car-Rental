@@ -1,9 +1,10 @@
 import React from 'react'
+import DefaultPage from '../Component/DefaultPage'
 
 export default function CarBooking() {
-  return (
-    <div>
-        <h1>Book a Ride</h1>
-    </div>
+  return (  
+    <DefaultPage>
+ <h1>Book a Ride</h1>
+    </DefaultPage>
   )
 }
