@@ -1,12 +1,20 @@
 import React from 'react'
 import {Row,Col,Input,Form} from 'antd';
 import { Link } from 'react-router-dom';
+import {useDispatch}from 'react-redux';
+import {userRegister} from '../redux/actions/userActions'
 
-function onFinish(values){
-  console.log(values)
-}
+
 
 function Register() {
+  const dispatch = useDispatch()
+
+  function onFinish(values){
+    dispatch(userRegister(values))
+    console.log(values)
+  }
+
+  
   return (
     <div className='login'>
     <Row gutter={16} className="d-flex align-item-center">
