@@ -8,6 +8,9 @@ body {
   font-family: 'Lato', sans-serif !important;
   background-color: azure;
 }
+body,html{
+  overflow-x: hidden !important;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -18,11 +21,26 @@ code {
 .heading{
   box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
 }
+.ant-row{
+  margin:0 20px !important;
+}
 
 h1{
   font-size: 30px;
   font-weight: bold;
 
+}
+.btn1{
+  box-shadow:none;
+  background-color: #fff!important;
+  color: orangered!important;
+  border: 1px solid orangered!important;
+  padding: 5px 15px!important;
+  
+
+}
+.btn1:focus{
+  border: none!important;
 }
 
 .header{
@@ -49,7 +67,7 @@ h2{
 .login{
   background-color:#5C5C5C;
   min-height: 100vh;
-  padding-top: 100px ;
+  padding-top: 160px ;
   
 }
 .login label, .login h1{
@@ -76,10 +94,15 @@ h2{
   position:absolute;
   left: 0;
  right: 0;
- top: 40%;
+ top: 30%;
  bottom: 60%;
- transform: translateY(-50%, -50%);
+ transform: translateY(-40%, -50%);
  font-size: 35px;
  opacity: 0.2!important;
 
+}
+
+.login a{
+  color: #fff!important;
+  opacity: 0.5;
 }
