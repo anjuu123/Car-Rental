@@ -1,8 +1,7 @@
-const mongoose = require("./../db");
+const mongoose = require("../db");
 
-const Schema = mongoose.Schema;
 
-const carSchema = new Schema({
+const carSchema = new mongoose.Schema({
 
     name: {type : String, required:true},
     image:{type : String, required : true},
