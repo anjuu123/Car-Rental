@@ -1,14 +1,18 @@
 import React from 'react'
 import { Row, Col, Form, Input} from 'antd';
 import { Link } from 'react-router-dom';
+import {useDispatch}from 'react-redux';
+import {userLogin} from '../redux/actions/userActions'
 
-
-
-function onFinish(values){
-  console.log(values)
-}
 
 function Login() {
+  const dispatch = useDispatch()
+  function onFinish(values){
+    dispatch(userLogin(values))
+    console.log(values)
+  }
+
+  
   return (
     <div className='login'>
       <Row gutter={16} className="d-flex align-item-center">
