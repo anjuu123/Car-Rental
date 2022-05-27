@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
+require('dotenv').config();
 const port =process.env.PORT || 8000
-const dbconnection = require('./db')
+const dbConnection = require('./db')
+app.use(express.json())
 
 
 app.use('/api/cars/', require('./routes/carRoutes'))

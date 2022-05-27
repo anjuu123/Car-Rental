@@ -1,10 +1,12 @@
-const mongoose = require("mongoose");
+const mongoose = require("./../db");
 
-const carSchema = new mongoose.Schema({
+const Schema = mongoose.Schema;
+
+const carSchema = new Schema({
 
     name: {type : String, required:true},
     image:{type : String, required : true},
-    capacity:{type : number, required : true},
+    capacity:{type : Number, required : true},
     feulType:{type : String, required : true},
    bookedTimeSlots : [
        {
@@ -16,5 +18,4 @@ const carSchema = new mongoose.Schema({
     }, {timestamps : true}
 )
 
-const carModel = mongoose.model('cars', carSchema)
-mongoose.model.exports = carModel
+module.exports = mongoose.model("Cars", carSchema);

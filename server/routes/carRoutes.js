@@ -1,16 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const Car = require("../models/carModel")
 
-router.get("/getallcars",async(req,res) => {
-    try {
-        const cars = await Car.find()
-        res.send(cars)
+const Car = require("./../models/carModel");
 
-    } catch(error){
-       return res.status(400).json(error);
-    }
-});
+router.get("/getallcars", (req,res) => {
+Car.find({}).then((item) => {
+    res.json({
+        status:200,
+        Car:Car,
+    });
+    })
+})
 
 
 module.exports = router;
