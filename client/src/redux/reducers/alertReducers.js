@@ -2,7 +2,8 @@ const initialData = {
     loading:false
 };
 
-export const alertReducer=(state=initialData,action) => {
+export const alertReducer=(state = initialData, action) => {
+    
     switch(action.type)
     {
         case 'LOADING' : {
@@ -14,4 +15,4 @@ export const alertReducer=(state=initialData,action) => {
 
         default: return state
     }
-}
+} 
