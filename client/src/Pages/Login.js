@@ -1,5 +1,12 @@
 import React from 'react'
-import { Row, Col, Form, Input, Button } from 'antd';
+import { Row, Col, Form, Input} from 'antd';
+import { Link } from 'react-router-dom';
+
+
+
+function onFinish(values){
+  console.log(values)
+}
 
 function Login() {
   return (
@@ -13,7 +20,7 @@ function Login() {
         <Col lg={8} className='text-left'>
 
 
-          <Form layout="vertical" className='login-form'>
+          <Form layout="vertical" className='login-form'  onFinish={onFinish}>
             <h1>Login</h1>
             <hr />
 
@@ -25,7 +32,11 @@ function Login() {
               <Input />
             </Form.Item>
 
-            <Button className='btn1'>Login</Button>
+            <button className='btn1 mt-2 mb-3'>Login</button>
+
+            <br/>
+
+<Link to='/register'>Click Here to Register</Link>
           </Form>
         </Col>
       </Row>
